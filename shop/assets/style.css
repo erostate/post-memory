@@ -120,6 +120,11 @@ menu .categories button.active {
     border: solid 3px #5d7c56;
     transition: all 0.15s ease-in-out;
 }
+menu hr {
+    align-self: center;
+    border: 1px solid #707070;
+    width: 80%;
+}
 
 main {
     position: fixed;
@@ -179,6 +184,111 @@ main .products .product button:hover {
     background: #b4b4b4;
     border: solid 3px #707070;
     transition: all 0.25s ease-in-out;
+}
+
+main .view-product {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+}
+main .view-product img {
+    width: 600px;
+}
+main .view-product span {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+main .view-product button {
+    cursor: pointer;
+    background: var(--button-background);
+    color: var(--button-color);
+    border: solid 3px #D9D9D9;
+    outline: none;
+    width: 100%;
+    padding: 5px 0;
+    font-size: 100%;
+    font-weight: bold;
+    transition: all 0.25s ease-in-out;
+}
+main .view-product button:hover {
+    background: #b4b4b4;
+    border: solid 3px #707070;
+    transition: all 0.25s ease-in-out;
+}
+
+main.cart {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    gap: 20px;
+    width: 100%;
+}
+main.cart div {
+    background: #181818;
+    padding: 5px;
+    border-radius: 0.4rem;
+}
+main.cart div.shopping-cart {
+    width: 50%;
+}
+main.cart div.shopping-cart .list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+main.cart div.shopping-cart .list .item {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+main.cart div.shopping-cart .list .item img {
+    width: 100px;
+}
+main.cart div.shopping-cart .list .item span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+main.cart div.shopping-cart .list .item span.nb-selection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+main.cart div.shopping-cart .list .item span.nb-selection button {
+    background: none;
+    border: none;
+    outline: none;
+    color: #D9D9D9;
+    font-size: 170%;
+    cursor: pointer;
+}
+main.cart div.shopping-cart .list .item span.nb-selection input {
+    width: 50px;
+    text-align: center;
+}
+main.cart div.shopping-cart .list .item .btn-delete-product {
+    cursor: pointer;
+    background: none;
+    color: none;
+    border: none;
+    color: #D9D9D9;
+    font-size: 130%;
+    transition: all 0.15s ease-in-out;
+}
+main.cart div.shopping-cart .list .item .btn-delete-product:hover {
+    color: #707070;
+    transition: all 0.15s ease-in-out;
+}
+main.cart div.summary {
+    width: 30%;
 }
 
 

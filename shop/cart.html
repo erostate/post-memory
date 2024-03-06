@@ -1,0 +1,115 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Memory - Accueil</title>
+    <link  type="text/css" rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo" style="cursor: pointer;" onclick="window.location.href='index'">
+            <img src="assets/img/logo-nobg-header.png" alt="">
+            <p>Post Memory</p>
+        </div>
+        <button onclick="window.location.href='login'" class="btn">Se connecter</button>
+    </header>
+
+    <menu>
+        <div class="search">
+            <input id="searchProductValue" type="text" placeholder="Rechercher un produit" onkeydown="searchProductInput(event)">
+            <button class="btn-search" onclick="searchProduct()">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <div class="categories">
+            <button>Tous les produits</button>
+            <button>Produits populaires</button>
+            <button>Produits en promotion</button>
+            <br><hr><br>
+            <button onclick="window.location.href='index.html'">Retour en arrière</button>
+            <button onclick="window.location.href='cart.html'">Panier</button>
+        </div>
+    </menu>
+
+    <main class="cart">
+        <div class="shopping-cart">
+            <div class="list">
+                <div class="item">
+                    <span>
+                        <img src="assets/img/product1.png" alt="">
+                        <p>Product 1</p>
+                    </span>
+                    <span class="nb-selection">
+                        <button>-</button>
+                        <input type="text" value="1">
+                        <button>+</button>
+                    </span>
+                    <p>15,00€</p>
+                    <button class="btn-delete-product"><i class="fa-solid fa-trash"></i></button>
+                </div>
+                <div class="item">
+                    <img src="" alt="">
+                    <span>
+                        <p>Product 1</p>
+                    </span>
+                    <span>
+                        <button>-</button>
+                        <input type="text" value="1">
+                        <button>+</button>
+                    </span>
+                    <span>
+                        <p>15,00€</p>
+                    </span>
+                    <span>
+                        <button>Supprimer</button>
+                    </span>
+                </div>
+                <div class="item">
+                    <img src="" alt="">
+                    <span>
+                        <p>Product 1</p>
+                    </span>
+                    <span>
+                        <button>-</button>
+                        <input type="text" value="1">
+                        <button>+</button>
+                    </span>
+                    <span>
+                        <p>15,00€</p>
+                    </span>
+                    <span>
+                        <button>Supprimer</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="summary">
+            <h1>Total</h1>
+            <hr>
+            <p>Code de réduction ?</p>
+            <span>
+                <input type="text" placeholder="Code de réduction">
+                <button>Appliquer</button>
+            </span>
+            <hr>
+            <span>
+                <p>Prix total :</p>
+                <p>15,00€</p>
+            </span>
+            <span>
+                <p>Réduction :</p>
+                <p>0,00€</p>
+            </span>
+            <span>
+                <p>Prix final :</p>
+                <p>15,00€</p>
+            </span>
+            <hr>
+            <button>Passer la commande</button>
+        </div>
+    </main>
+    
+</body>
+<script src="https://kit.fontawesome.com/1224050b85.js" crossorigin="anonymous"></script>
+<script src="assets/script.js"></script>
+</html>
