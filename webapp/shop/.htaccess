@@ -1,0 +1,12 @@
+# Redirections https blms.fr
+#RewriteEngine On
+#RewriteCond %{HTTP:X-Forwarded-Proto} !https
+#RewriteCond %{HTTPS} !on
+#RewriteCond %{HTTP_HOST} ^(?:www\.)?blms\.fr(?:.*)$ [nc]
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [redirect=301,L]
+
+# All url display index.php
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]

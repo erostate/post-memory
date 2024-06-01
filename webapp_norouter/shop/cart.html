@@ -1,0 +1,129 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Memory - Accueil</title>
+    <link  type="text/css" rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo" style="cursor: pointer;" onclick="window.location.href='index'">
+            <img src="assets/img/logo-nobg-header.png" alt="">
+            <p>Post Memory</p>
+        </div>
+        <button onclick="window.location.href='login'" class="btn">Se connecter</button>
+    </header>
+
+    <menu>
+        <div class="search">
+            <input id="searchProductValue" type="text" placeholder="Rechercher un produit" onkeydown="searchProductInput(event)">
+            <button class="btn-search" onclick="searchProduct()">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <div class="categories">
+            <button>Tous les produits</button>
+            <button>Produits populaires</button>
+            <button>Produits en promotion</button>
+            <br><hr><br>
+            <button onclick="window.location.href='index.html'">Retour en arrière</button>
+            <button class="active" onclick="window.location.href='cart.html'">Panier</button>
+        </div>
+    </menu>
+
+    <main class="cart">
+        <div class="shopping-cart">
+            <div class="header">
+                <h1>Panier</h1>
+                <p>3 produits</p>
+            </div>
+            <div class="list">
+                <div class="item">
+                    <span>
+                        <img src="assets/img/product1.png" alt="">
+                        <p>Product 1</p>
+                    </span>
+                    <span class="nb-selection">
+                        <button onclick="changeCountProduct('1', 'remove')">-</button>
+                        <input id="count-p-1" type="text" value="1">
+                        <button onclick="changeCountProduct('1', 'add')">+</button>
+                    </span>
+                    <p>15,00€</p>
+                    <button onclick="changeCountProduct('1', 'delete')" class="btn-delete-product">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+                <div class="item">
+                    <span>
+                        <img src="assets/img/product2.png" alt="">
+                        <p>Product 2</p>
+                    </span>
+                    <span class="nb-selection">
+                        <button onclick="changeCountProduct('2', 'remove')">-</button>
+                        <input id="count-p-2" type="text" value="1">
+                        <button onclick="changeCountProduct('2', 'add')">+</button>
+                    </span>
+                    <p>15,00€</p>
+                    <button onclick="changeCountProduct('2', 'delete')" class="btn-delete-product">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+                <div class="item">
+                    <span>
+                        <img src="assets/img/product3.png" alt="">
+                        <p>Product 3</p>
+                    </span>
+                    <span class="nb-selection">
+                        <button onclick="changeCountProduct('3', 'remove')">-</button>
+                        <input id="count-p-3" type="text" value="1">
+                        <button onclick="changeCountProduct('3', 'add')">+</button>
+                    </span>
+                    <p>15,00€</p>
+                    <button onclick="changeCountProduct('3', 'delete')" class="btn-delete-product">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="summary">
+            <h1>Total</h1>
+            <hr><br>
+            <p>Code de réduction ?</p>
+            <span class="coupon-code">
+                <input id="couponCode" type="text" placeholder="Entrer le code">
+                <button onclick="applyCouponCode()">Appliquer</button>
+            </span>
+            <!-- <p class="coupon-code-apply">Code appliqué : <span style="font-weight: bold;">HELLO20</span></p> -->
+            <br><hr style="border: solid 1px #707070;"><br>
+            <span class="recap">
+                <span>
+                    <p>Prix des produits :</p>
+                    <p style="color: #b4b4b4">45,00€</p>
+                </span>
+                <span>
+                    <p>Réduction :</p>
+                    <p id="reducAmount">0,00€</p>
+                    <!-- <p id="reducAmount" class="active">9,00€</p> -->
+                </span>
+                <span style="font-size: 120%; font-weight: bold;">
+                    <p>Prix final :</p>
+                    <p>45,00€</p>
+                </span>
+            </span>
+            <br><hr style="border: solid 1px #707070;"><br>
+            <span>
+                <b style="color: rgb(177, 36, 36); font-size: 120%;">Important:</b>
+                <p style="font-style: italic;">
+                    Aucun paiement se fait automatiquement. Chaque commande passée sont enregistrées et vous devrez effectuer un virement bancaire en fin de mois lorsque vous recevrez un e-mail.<br>
+                    Vous avez un délais de 7 jours pour faire le paiement de vos commandes effectués le mois-ci. Si un paiement n'est pas effectué dans les 7 jours, votre compte sera bloqué et vous ne pourrez plus passer de commande.
+                </p>
+                <br>
+                <button class="btn-purchase">Passer la commande</button>
+            </span>
+        </div>
+    </main>
+    
+</body>
+<script src="https://kit.fontawesome.com/1224050b85.js" crossorigin="anonymous"></script>
+<script src="assets/script.js"></script>
+</html>

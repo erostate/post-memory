@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Memory - Accueil</title>
+    <link  type="text/css" rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo" style="cursor: pointer;" onclick="window.location.href='index'">
+            <img src="assets/img/logo-nobg-header.png" alt="">
+            <p>Post Memory</p>
+        </div>
+    </header>
+    <main>
+        <div>
+            <h2>Tchoupi Delacruz, 19 ans</h2>
+            <p>14/08/2004 - 21/05/2024</p>
+        </div>
+
+        <div class="picture-sect">
+            <div>
+                <span class="img" id="img1"></span>
+                <span class="img" id="img2"></span>
+            </div>
+            <span class="img" id="img3">
+                <p id="nbMorePic">+2</p>
+            </span>
+        </div>
+
+        <div style="width: 100%; margin-top: 30px; display: flex; flex-direction: row; justify-content: center;">
+            <button onclick="seeMoreImage()" class="btn" style="width: auto; padding: 2px 15px;">Voir plus d'image</button>
+        </div>
+
+        <div style="margin-top: 50px;">
+            <h3>Informations:</h3>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae adipisci ex inventore, voluptate quidem similique excepturi voluptatum nihil. Pariatur, hic iusto officiis quisquam vero perspiciatis veritatis ipsa tempore minima numquam.
+            </p>
+        </div>
+    </main>
+
+    <!-- MODAL -->
+    <section id="allImageModal" class="imageModal">
+        <span class="close">
+            <button onclick="closeModal('allImageModal')">Fermer</button>
+        </span>
+        <div class="modal-content-img">
+            <img src="https://media.sudouest.fr/15122617/1000x500/capture.jpg?v=1684155896" alt="">
+            <img src="https://img.lemde.fr/2017/09/28/0/0/500/357/664/0/75/0/c461fd3_11702-dhotpa.dhhpno2yb9.jpg" alt="">
+            <img src="https://mescadeaux.com/storage/img/actu/big/deces-papa-tchoupi.jpg" alt="">
+            <img src="https://mon-super-anniversaire.com/wp-content/uploads/2021/01/Anniversaire-Tchoupi.png" alt="">
+            <img src="https://anniversaire-celebrite.com/upload/250x333/tchoupi-250.jpg" alt="">
+            <img src="https://s.france24.com/media/display/85135c32-0f34-11e9-b229-005056a964fe/w:1280/p:1x1/115455839e2194a1a00060d896d78c07.jpg" alt="">
+            <img src="https://s2.dmcdn.net/v/OtIwb1RrkJIpmqWDg/x1080" alt="">
+        </div>
+    </section>
+</body>
+<script src="https://kit.fontawesome.com/1224050b85.js" crossorigin="anonymous"></script>
+<script src="assets/script.js"></script>
+</html>

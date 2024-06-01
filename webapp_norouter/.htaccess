@@ -1,0 +1,11 @@
+# Redirections https blms.fr
+# RewriteEngine On
+# RewriteCond %{HTTP:X-Forwarded-Proto} !https
+# RewriteCond %{HTTPS} !on
+# RewriteCond %{HTTP_HOST} ^(?:www\.)?blms\.fr(?:.*)$ [nc]
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [redirect=301,L]
+
+RewriteEngine On
+RewriteBase /web/post_memory/webapp/
+
+RewriteRule ^product/([a-zA-Z0-9]+)$ shop/product.php?id=$1 [L,QSA]
